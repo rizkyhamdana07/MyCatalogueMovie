@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".movie.details.DetailsMovieActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/img_backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/backdrop_image"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/primaryColor" />
+
+        <View
+            android:id="@+id/view_bg"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/img_backdrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_backdrop" />
+
+
+        <ImageView
+            android:id="@+id/img_poster"
+            android:layout_width="190dp"
+            android:layout_height="240dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/view_bg"
+            app:layout_constraintEnd_toEndOf="@+id/view_bg"
+            app:layout_constraintStart_toStartOf="@+id/view_bg"
+            app:layout_constraintTop_toTopOf="@+id/view_bg"
+            tools:background="@color/primaryColor"
+            android:contentDescription="@string/poster_image" />
+
+
+        <TextView
+            android:id="@+id/tv_vote_average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_circle"
+            android:fontFamily="@font/poppins_semi"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/view_bg"
+            app:layout_constraintTop_toTopOf="@+id/view_bg"
+            tools:text="7.6" />
+
+        <TextView
+            android:id="@+id/tv_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/bg_color"
+            android:fontFamily="@font/poppins_semi"
+            android:textColor="@color/white"
+            android:padding="2dp"
+            android:text="@string/title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_bg" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_title_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_text"
+            tools:text="Avengers Infinity War" />
+
+        <TextView
+            android:id="@+id/tv_release_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:background="@color/bg_color"
+            android:fontFamily="@font/poppins_semi"
+            android:padding="2dp"
+            android:text="@string/release_date"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+        <TextView
+            android:id="@+id/tv_release"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintStart_toStartOf="@+id/tv_release_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_release_text"
+            tools:text="12-12-2020" />
+
+        <TextView
+            android:id="@+id/tv_genre_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:background="@color/bg_color"
+            android:fontFamily="@font/poppins_semi"
+            android:padding="2dp"
+            android:text="@string/genre"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_release" />
+
+        <TextView
+            android:id="@+id/tv_genre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_genre_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_genre_text"
+            tools:text="Action, Comedy, Adventure" />
+
+        <TextView
+            android:id="@+id/tv_overview_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:background="@color/bg_color"
+            android:fontFamily="@font/poppins_semi"
+            android:padding="2dp"
+            android:text="@string/overview"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_genre" />
+
+        <TextView
+            android:id="@+id/tv_overview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_overview_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_overview_text"
+            tools:text="This is the overview of film" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fb_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/ic_baseline_favorite_border_24"
+            app:layout_constraintBottom_toBottomOf="@+id/view_bg"
+            app:layout_constraintEnd_toEndOf="@+id/view_bg"
+            app:layout_constraintStart_toEndOf="@+id/view_bg"
+            app:layout_constraintTop_toBottomOf="@+id/img_poster"
+            android:contentDescription="@string/favorite" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
